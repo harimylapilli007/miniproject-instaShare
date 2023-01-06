@@ -1,0 +1,37 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-container {
+  width: 55%;
+  margin-top: 10px;
+}
+
+.logo-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  margin: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.username {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #262626;
+}
+.slick-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,92 @@
+.login-logo {
+  height: 372;
+  width: 582px;
+  position: absolute;
+  right: 900px;
+  top: 31.84%;
+  bottom: 31.74%;
+}
+.card-container {
+  position: absolute;
+  left: 57.22%;
+  right: 11.11%;
+  top: 27.64%;
+  bottom: 27.64%;
+  background: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+}
+@media screen and (max-width: 578px) {
+  .card-container {
+    box-shadow: none;
+  }
+}
+
+.instagram-logo {
+  height: 41px;
+  width: 82px;
+  margin-top: 30px;
+}
+.button {
+  height: 40px;
+  width: 360px;
+  background: #4094ef;
+  border-radius: 8px;
+  border: none;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #262626;
+}
+.user-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.label {
+  width: 360px;
+  height: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #262626;
+  margin-bottom: 10px;
+}
+.input {
+  height: 40px;
+  width: 360px;
+  margin-bottom: 16px;
+  left: 0px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background: #eeeeee;
+  border-radius: 2px;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 578px) {
+  .login-logo {
+    display: block;
+  }
+}

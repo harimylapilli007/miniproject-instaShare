@@ -1,0 +1,131 @@
+.post-item {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px 4px 0px 0px;
+  height: 866px;
+  width: 1040px;
+  border-radius: 0px;
+  list-style-type: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pic-name {
+  width: 1040px;
+  height: 60px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+.profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+  border-color: #ffffff;
+  border-style: solid;
+  margin: 3px;
+  margin-top: 3px;
+}
+.image-circle {
+  background-image: linear-gradient(#e20337, #c60188, #7700c3);
+  border-width: 3px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+.username-profile {
+  height: 18px;
+  width: 104px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #262626;
+}
+.link {
+  text-decoration: none;
+}
+.post-image-main {
+  height: 614px;
+  width: 1040px;
+}
+.button-reacts {
+  background-color: transparent;
+  border-width: 0px;
+  outline: none;
+}
+.components-container {
+  box-sizing: border-box;
+  width: 1040px;
+  height: 194px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 0px 0px 4px 4px;
+}
+.react-image {
+  width: 22px;
+  height: 19.39px;
+  margin-right: 4px;
+}
+.button-container {
+  width: 1040px;
+  padding: 3px;
+  margin-bottom: none;
+}
+.likes {
+  width: 1040px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+.caption {
+  width: 1040px;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+.comment-container {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15px;
+}
+
+.time {
+  width: 1040px;
+  padding-left: 15px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #989898;
+}
+.comment-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 4px;
+  color: #262626;
+}
+.com-nt {
+  font-style: 'roboto';
+  font-size: 14px;
+}
