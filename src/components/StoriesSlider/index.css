@@ -35,3 +35,30 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 640px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-container {
+    width: 80%;
+    margin-top: 0px;
+    margin: auto;
+  }
+
+  .logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 35px;
+    margin: auto;
+  }
+  .slick-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

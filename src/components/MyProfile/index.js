@@ -66,7 +66,7 @@ class MyProfile extends Component {
 
     return (
       <ul className="my-profile-container">
-        <ProfileCard data={profileData} />
+        <ProfileCard data={profileData} my="my" />
       </ul>
     )
   }

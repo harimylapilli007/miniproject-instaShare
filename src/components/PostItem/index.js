@@ -34,7 +34,7 @@ const PostItem = props => (
       }
 
       return (
-        <li className="post-item">
+        <div className="post-item">
           <div className="pic-name">
             <div className="image-circle">
               <img
@@ -92,7 +92,7 @@ const PostItem = props => (
             </ul>
             <p className="time">{createdAt}</p>
           </div>
-        </li>
+        </div>
       )
     }}
   </SearchContext.Consumer>

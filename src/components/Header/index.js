@@ -81,10 +81,11 @@ const Header = props => (
                 Profile
               </Link>
             </li>
+            <button className="logout-button" type="button" onClick={onLogout}>
+              Logout
+            </button>
           </ul>
-          <button className="logout-button" type="button" onClick={onLogout}>
-            Logout
-          </button>
+
           <button
             className="close-button"
             type="button"
@@ -113,7 +114,7 @@ const Header = props => (
               <div className="home-prof">
                 <div className="search-input-icon">
                   <input
-                    className="search-input"
+                    className="search-input-desk"
                     type="search"
                     placeholder="Search Caption"
                     onChange={ChangeSearchInput}
@@ -124,11 +125,7 @@ const Header = props => (
                     type="button"
                     className="icon-bg"
                   >
-                    <img
-                      src="https://res.cloudinary.com/du6o8nypd/image/upload/v1672809398/search_dp6owh.png"
-                      alt="search-icon"
-                      className="search-icon"
-                    />
+                    <FaSearch className="search-icon-desk" />
                   </button>
                 </div>
                 <ul className="home-prof">

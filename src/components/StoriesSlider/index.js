@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import {Component} from 'react'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
+import Loader from 'react-loader-spinner'
 
 import './index.css'
 
@@ -36,9 +37,17 @@ const settings = {
   ],
 }
 
+const apiStoriesStatus = {
+  initial: 'INITIAL',
+  inProgress: 'IN_PROGRESS',
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+}
+
 class StoriesSlider extends Component {
   state = {
     profileList: [],
+    apiStatusStories: apiStoriesStatus.initial,
   }
 
   componentDidMount() {
@@ -46,6 +55,7 @@ class StoriesSlider extends Component {
   }
 
   getStories = async () => {
+    this.setState({apiStatusStories: apiStoriesStatus.inProgress})
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = 'https://apis.ccbp.in/insta-share/stories'
     const options = {
@@ -64,35 +74,80 @@ class StoriesSlider extends Component {
       }))
       this.setState({
         profileList: updatedDate,
+        apiStatusStories: apiStoriesStatus.success,
       })
+    } else {
+      this.setState({apiStatusStories: apiStoriesStatus.failure})
     }
   }
 
-  renderSlider = () => {
-    const {profileList} = this.state
-    return (
-      <Slider {...settings}>
-        {profileList.map(eachProfile => {
-          const {userId, storyUrl, userName} = eachProfile
-          return (
-            <li className="slick-item" key={userId}>
-              <img className="logo-img" src={storyUrl} alt="profile logo" />
-              <Link to={`/users/${userId}`} className="link">
-                <p className="username">{userName}</p>
-              </Link>
-            </li>
-          )
-        })}
-      </Slider>
+  renderLoadingView = () => (
+    <div className="loader-container">
+      <Loader type="TailSpin" color="#4094EF" height={50} width={50} />
+    </div>
+  )
+
+  onRetry = () => {
+    this.setState(
+      {apiStatusStories: apiStoriesStatus.inProgress},
+      this.getStoriesDetails(),
     )
   }
 
-  render() {
+  renderStoriesFailureView = () => (
+    <div className="failure-view">
+      <img
+        src="https://res.cloudinary.com/dq7imhrvo/image/upload/v1643651534/insta%20Shere%20clone/alert-triangle_hczx0o.png"
+        alt="failure view"
+        className="failure-img"
+      />
+      <p className="failure-head">Something went wrong. Please try again</p>
+      <button className="failure-button" type="button" onClick={this.onRetry}>
+        Try again
+      </button>
+    </div>
+  )
+
+  renderSuccessView = () => {
+    const {profileList} = this.state
     return (
       <div className="main-container">
-        <div className="slick-container">{this.renderSlider()}</div>
+        <div className="slick-container">
+          <Slider {...settings}>
+            {profileList.map(eachProfile => {
+              const {userId, storyUrl, userName} = eachProfile
+              return (
+                <li className="slick-item" key={userId}>
+                  <img className="logo-img" src={storyUrl} alt="user story" />
+                  <Link to={`/users/${userId}`} className="link">
+                    <p className="username">{userName}</p>
+                  </Link>
+                </li>
+              )
+            })}
+          </Slider>
+        </div>
       </div>
     )
+  }
+
+  renderStoriesView = () => {
+    const {apiStatusStories} = this.state
+
+    switch (apiStatusStories) {
+      case apiStoriesStatus.success:
+        return this.renderSuccessView()
+      case apiStoriesStatus.inProgress:
+        return this.renderLoadingView()
+      case apiStoriesStatus.failure:
+        return this.renderStoriesFailureView()
+      default:
+        return null
+    }
+  }
+
+  render() {
+    return this.renderStoriesView()
   }
 }
 

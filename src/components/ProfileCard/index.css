@@ -29,8 +29,7 @@
 .Profile-pic {
   width: 180px;
   height: 180px;
-  left: 200px;
-  top: 97px;
+
   border-radius: 90px;
 }
 .user-detail-container {
@@ -124,65 +123,6 @@
   margin-left: 10px;
 }
 
-@media screen and (max-width: 480px) {
-  .Profile-pic {
-    width: 96px;
-    height: 96px;
-  }
-  .user-detail-container {
-    margin-left: 30px;
-  }
-  .profile-head {
-    font-weight: 300;
-    font-size: 16px;
-  }
-  .count-follower {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    /* identical to box height, or 133% */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    color: #262626;
-  }
-  .highlight {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .my-profile-container {
-    padding: 0px;
-    margin: 0px;
-  }
-  .post-image {
-    margin: 1px;
-  }
-}
-
-.bio-container {
-  margin-top: 25px;
-  margin-left: 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .bio-container {
-    margin-top: 15px;
-    margin-left: 4px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .bio-container-l {
-    display: none;
-  }
-}
 .story-container {
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
@@ -241,4 +181,149 @@
   font-size: 32px;
   line-height: 48px;
   color: #262626;
+}
+@media screen and (max-width: 640px) {
+  .Profile-card {
+    height: 100%;
+    max-width: 320px;
+    margin-right: 20px;
+  }
+  .image-user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .Profile-pic {
+    height: 96px;
+    width: 96px;
+    border-radius: 90px;
+  }
+  .count {
+    max-width: 320px;
+  }
+  .profile-head {
+    height: 24px;
+    width: 320px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+  }
+  .bio {
+    width: 312px;
+    height: 72px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 0px;
+    line-height: 24px;
+    color: #262626;
+  }
+  .bio-name {
+    height: 24px;
+    width: 113px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+    padding-left: 0px;
+  }
+  .count-follower {
+    font-family: Roboto;
+    font-style: normal;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    color: #262626;
+  }
+  .Profile-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 312px;
+    background-color: #fafafa;
+    margin-right: 50px;
+  }
+  .user-stories {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+    padding: 5px;
+
+    margin-bottom: 0px;
+  }
+
+  .story-container {
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    border-radius: 45px;
+    height: 86px;
+    width: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .post-head {
+    width: 36px;
+    height: 24px;
+    margin-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    display: flex;
+    align-items: center;
+
+    color: #262626;
+  }
+  .head-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .user-posts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    margin-right: 30px;
+  }
+  .post-image-container {
+    height: 118px;
+    width: 118px;
+    margin: 15px;
+    margin-right: auto;
+  }
+  .post-image {
+    height: 118px;
+    width: 118px;
+    margin: 10px;
+  }
+  .posts-view {
+    margin-right: auto;
+
+    max-width: 360px;
+  }
 }
