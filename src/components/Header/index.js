@@ -41,7 +41,12 @@ const Header = props => (
             onChange={ChangeSearchInput}
             value={searchInput}
           />
-          <button className="button-s" type="button" onClick={onsetSearchInput}>
+          <button
+            className="button-s"
+            type="button"
+            onClick={onsetSearchInput}
+            tetsid="searchIcon"
+          >
             <FaSearch className="search-icon" />
           </button>
         </div>
@@ -124,6 +129,7 @@ const Header = props => (
                     onClick={onsetSearchInput}
                     type="button"
                     className="icon-bg"
+                    testid="searchIcon"
                   >
                     <FaSearch className="search-icon-desk" />
                   </button>

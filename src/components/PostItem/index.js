@@ -59,6 +59,7 @@ const PostItem = props => (
                   className="button-reacts"
                   type="button"
                   onClick={unLikeIcon}
+                  testid="unLikeIcon"
                 >
                   <FcLike className="react-image" />
                 </button>
@@ -67,6 +68,7 @@ const PostItem = props => (
                   className="button-reacts"
                   type="button"
                   onClick={likeIcon}
+                  testid="likeIcon"
                 >
                   <BsHeart className="react-image" />
                 </button>
